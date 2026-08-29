@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Bus Booking Engine | Muze Travels</title>
+    <link rel="stylesheet" href="css/bus-style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        
+    </ul>
+</div>
+
+    <div class="booking-container">
+        <!-- Main Search Widget Box -->
+        <div class="search-widget">
+            <h2>Book Bus Tickets</h2>
+            <p>Direct routes from Pune & Mumbai across Maharashtra</p>
+
+            <div class="search-grid">
+                <!-- From Source Dropdown -->
+                <div class="form-group">
+                    <label for="sourceCity">From</label>
+                    <select id="sourceCity">
+                        <option value="">Select Origin City</option>
+                        <option value="pune">Pune</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="latur">Latur</option>
+                        <option value="nanded">Nanded</option>
+                        <option value="nagpur">Nagpur</option>
+                        <option value="akola">Akola</option>
+                        <option value="pharbani">Pharbani</option>
+                        <option value="amaravati">Amravati</option>
+                        <option value="nakhik">Nakhik</option>
+                        <option value="aurangabad">Aurangabad</option>
+                        <option value="goa">Goa</option>
+                    </select>
+                </div>
+
+                <!-- To Destination Dropdown (Initially Disabled like real websites) -->
+                <div class="form-group">
+                    <label for="destCity">Destination</label>
+                    <select id="destCity">
+                        <option value="">Select Origin City</option>
+                        <option value="pune">Pune</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="latur">Latur</option>
+                        <option value="nanded">Nanded</option>
+                        <option value="nagpur">Nagpur</option>
+                        <option value="akola">Akola</option>
+                        <option value="pharbani">Pharbani</option>
+                        <option value="amaravati">Amravati</option>
+                        <option value="nakhik">Nakhik</option>
+                        <option value="aurangabad">Aurangabad</option>
+                        <option value="goa">Goa</option>
+                    </select>
+                </div>
+
+                <!-- Date Picker -->
+                <div class="form-group">
+                    <label for="travelDate">Date of Journey</label>
+                    <input type="date" id="travelDate">
+                </div>
+
+                <!-- Search Action Button -->
+                <div class="form-group action-cell">
+                    <button id="findBusesBtn" class="search-trigger-btn">Search Buses</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Real-Life Filter Toolbelt Banner (Appears after search) -->
+        <div id="filterToolbelt" class="filter-toolbelt" style="display: none;">
+            <span class="filter-label">Filter Results:</span>
+            <button class="filter-pill active" data-filter="all">All Buses</button>
+            <button class="filter-pill" data-filter="AC Sleeper">AC Sleeper</button>
+            <button class="filter-pill" data-filter="Volvo Multi-Axle">Volvo Semi-Sleeper</button>
+            <button class="filter-pill" data-filter="Non-AC">Non-AC</button>
+        </div>
+
+        <!-- Dynamic Output Display Stream -->
+        <div id="busListOutput" class="bus-list-output">
+            <div class="empty-state">
+                <p>Choose your route details above to explore live luxury coach options.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
