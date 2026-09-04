@@ -1,0 +1,889 @@
+/* ================= BASIC ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fa;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    background: #000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+
+    z-index: 1000;
+}
+
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+
+.logo a {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+}
+
+
+.navbar ul li a {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #ff9800;
+}
+
+
+.book-btn {
+    background: #ff9800;
+
+    padding: 11px 20px;
+
+    border-radius: 6px;
+
+    color: white !important;
+}
+
+
+.book-btn:hover {
+    background: #e68900;
+}
+
+
+/* ================= HERO ================= */
+
+.route-hero {
+    min-height: 560px;
+
+    margin-top: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("godavari.jpeg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-content {
+    max-width: 800px;
+    padding: 30px;
+    color: white;
+}
+
+
+.hero-small {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #ff9800;
+}
+
+
+.hero-content h1 {
+    font-size: 58px;
+    margin: 20px 0;
+}
+
+
+.hero-content p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #eee;
+}
+
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+.hero-btn,
+.hero-outline-btn {
+    padding: 14px 28px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.hero-btn {
+    background: #ff9800;
+    color: white;
+}
+
+
+.hero-btn:hover {
+    background: #e68900;
+}
+
+
+.hero-outline-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+
+.hero-outline-btn:hover {
+    background: white;
+    color: #111;
+}
+
+
+/* ================= INTRO ================= */
+
+.route-intro {
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 80px 20px 30px;
+
+    text-align: center;
+}
+
+
+.section-label {
+    color: #ff9800;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.route-intro h2,
+.why-heading h2 {
+    font-size: 38px;
+    margin: 12px 0 18px;
+}
+
+
+.route-intro p,
+.why-heading p {
+    color: #666;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+
+/* ================= FILTER ================= */
+
+.route-filter {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin: 25px 20px 50px;
+}
+
+
+.filter {
+    border: 1px solid #ddd;
+
+    background: white;
+
+    padding: 11px 22px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.filter:hover,
+.filter.active {
+    background: #ff9800;
+
+    color: white;
+
+    border-color: #ff9800;
+}
+
+
+/* ================= ROUTES ================= */
+
+.routes-section {
+    padding: 0 30px 90px;
+}
+
+
+.routes-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+.route-card {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+
+.route-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.14);
+}
+
+
+/* ================= ROUTE IMAGE ================= */
+
+.route-image {
+    height: 220px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.route-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+
+.route-card:hover .route-image img {
+    transform: scale(1.08);
+}
+
+
+.route-tag {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    background: #ff9800;
+
+    color: white;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.route-tag.featured {
+    background: #111;
+}
+
+
+/* ================= ROUTE CONTENT ================= */
+
+.route-content {
+    padding: 24px;
+}
+
+
+.route-title {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+
+.route-title span {
+    font-size: 10px;
+
+    color: #999;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.route-title h3 {
+    font-size: 22px;
+
+    margin-top: 4px;
+}
+
+
+.route-title > i {
+    color: #ff9800;
+
+    font-size: 20px;
+}
+
+
+.route-content > p {
+    color: #666;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+    margin: 18px 0;
+}
+
+
+/* ================= DETAILS ================= */
+
+.route-details {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.route-details span {
+    background: #f5f5f5;
+
+    padding: 7px 9px;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    color: #555;
+}
+
+
+.route-details i {
+    color: #ff9800;
+
+    margin-right: 3px;
+}
+
+
+/* ================= FOOTER ROUTE ================= */
+
+.route-footer {
+    padding-top: 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.route-footer span {
+    font-size: 11px;
+
+    color: #777;
+}
+
+
+.route-footer span i {
+    color: #ff9800;
+}
+
+
+.route-footer a {
+    color: #ff9800;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+.route-footer a:hover {
+    color: #d87d00;
+}
+
+
+/* ================= WHY US ================= */
+
+.why-route {
+    background: white;
+
+    padding: 90px 30px;
+}
+
+
+.why-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+.why-grid {
+    max-width: 1200px;
+
+    margin: 50px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.why-box {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    border: 1px solid #eee;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+
+.why-box:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+.why-box i {
+    font-size: 35px;
+
+    color: #ff9800;
+
+    margin-bottom: 18px;
+}
+
+
+.why-box h3 {
+    margin-bottom: 12px;
+
+    font-size: 18px;
+}
+
+
+.why-box p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ================= CTA ================= */
+
+.route-cta {
+    background:
+        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url("godavari.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 100px 30px;
+
+    color: white;
+}
+
+
+.route-cta > div {
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.route-cta span {
+    color: #ff9800;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.route-cta h2 {
+    font-size: 42px;
+
+    margin: 15px 0;
+}
+
+
+.route-cta p {
+    color: #ddd;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+.route-cta a {
+    display: inline-block;
+
+    background: #ff9800;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+
+.route-cta a:hover {
+    background: #e68900;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #0b0b0b;
+
+    color: white;
+}
+
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 65px 30px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+
+    gap: 50px;
+}
+
+
+.footer-about h2 {
+    font-size: 22px;
+
+    margin-bottom: 18px;
+}
+
+
+.footer-about p {
+    color: #aaa;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    max-width: 350px;
+}
+
+
+.social-icons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+.social-icons a {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #222;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+
+.social-icons a:hover {
+    background: #ff9800;
+}
+
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.footer-links h3 {
+    margin-bottom: 8px;
+}
+
+
+.footer-links a {
+    color: #aaa;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.footer-links a:hover {
+    color: #ff9800;
+}
+
+
+.footer-links p {
+    color: #aaa;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.footer-links p i {
+    color: #ff9800;
+
+    margin-right: 8px;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #222;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+.footer-bottom p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .routes-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-left {
+        gap: 20px;
+    }
+
+    .navbar ul {
+        gap: 15px;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .routes-container {
+        grid-template-columns: 1fr;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+        height: 65px;
+    }
+
+    .nav-left ul {
+        display: none;
+    }
+
+    .route-hero {
+        margin-top: 65px;
+
+        min-height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-btn,
+    .hero-outline-btn {
+        width: 100%;
+    }
+
+    .route-intro h2,
+    .why-heading h2 {
+        font-size: 30px;
+    }
+
+    .route-cta h2 {
+        font-size: 32px;
+    }
+
+    .route-footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
