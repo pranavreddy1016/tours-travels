@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunney Moom Packages</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<nav>
+    <ul class="navbar"> <li><a href="index.html">Home</a></li></ul>
+</nav>
+    <div class="hunneydiv">
+
+        <div class="tour-card">
+            <img src="images/maldives.jpg" alt="Maldives Tour">
+
+            <h2>Maldives Honeymoon</h2>
+
+            <p>5 Days / 4 Nights</p>
+            <p>Mumbai to Maldives</p>
+
+            <h3>₹45,999 / Couple</h3>
+
+            <button>Book Now</button>
+        </div>
+
+        <div class="tour-card">
+            <img src="images/goai.jpg" alt="Goa Tour">
+
+            <h2>Goa Honeymoon</h2>
+
+            <p>4 Days / 3 Nights</p>
+            <p>Mumbai to Goa</p>
+
+            <h3>₹18,999 / Couple</h3>
+
+            <button>Book Now</button>
+        </div>
+
+        <div class="tour-card">
+            <img src="images/manali.jpg" alt="Manali Tour">
+
+            <h2>Manali Honeymoon</h2>
+
+            <p>5 Days / 4 Nights</p>
+            <p>Delhi to Manali</p>
+
+            <h3>₹24,999 / Couple</h3>
+
+            <button>Book Now</button>
+        </div>
+
+        <div class="tour-card">
+            <img src="images/kashmir.jpg" alt="Kashmir Tour">
+
+            <h2>Kashmir Honeymoon</h2>
+
+            <p>6 Days / 5 Nights</p>
+            <p>Srinagar to Gulmarg</p>
+
+            <h3>₹32,999 / Couple</h3>
+
+            <button>Book Now</button>
+        </div>
+
+        <div class="tour-card">
+            <img src="images/dubai.jpg" alt="Dubai Tour">
+
+            <h2>Dubai Honeymoon</h2>
+
+            <p>5 Days / 4 Nights</p>
+            <p>Mumbai to Dubai</p>
+
+            <h3>₹55,999 / Couple</h3>
+
+            <button>Book Now</button>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+
+        const bookNowButtons = document.querySelectorAll('button');
+
+        bookNowButtons.forEach(button => {
+
+            button.addEventListener('click', () => {
+
+                const tourName =
+                    button.parentElement.querySelector('h2').textContent;
+
+
+                window.location.href =
+                    `booking.html?tour=${encodeURIComponent(tourName)}`;
+
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

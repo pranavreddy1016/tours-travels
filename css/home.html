@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }
+
+        select {
+            padding: 8px;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            text-transform: capitalize;
+        }
+
+        input {
+            display: none;
+        }
+
+        #btn {
+            width: 110px;               
+            background-color: rgb(41, 143, 114);
+            color: white;
+            font-weight: 600;
+            border-radius: 5px;
+            text-align: center;        
+            cursor: pointer;            
+            font-size: 14px;           
+
+        #btn:hover {
+            background-color: rgb(31, 113, 90);
+        }
+
+        #main #btn:hover {
+            background-color: rgb(24, 82, 66);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="changeh1">Select Your Device </h1>
+    <br>
+
+    <select id="deviceSelect">
+        <option selected disabled>Choose Your Device</option>
+        <option value="apple">Apple</option>
+        <option value="motorala">Motorala</option>
+        <option value="redmi">Redmi</option>
+        <option value="realme">Realme</option>
+    </select>
+
+    <br>
+    <br>
+    <div id="main">
+        <!-- Input file element -->
+        <input id="fileinp" type="file">
+        <!-- Custom Button -->
+        <div id="btn">
+            Upload File
+        </div>
+    </div>
+    
+    <script>
+        let dropdown = document.querySelector("#deviceSelect");
+        let h1 = document.querySelector("#changeh1");
+
+        dropdown.addEventListener("change", function (dets) {
+            h1.textContent = `${dets.target.value} Device Selected`;
+        });
+
+        let fileinp = document.querySelector("#fileinp");
+        let btn = document.querySelector("#btn");
+
+        // FIX: Button par click karne par hidden file input trigger hoga
+        btn.addEventListener("click", function () {
+            fileinp.click();
+        });
+
+        // FIX: File select hone par file ka naam button par dikhega
+        fileinp.addEventListener("change", function (dets) {
+            let file = dets.target.files[0];
+            if (file) {
+                btn.textContent = file.name;
+                btn.style.width = "auto";       /* File name bada ho toh button auto adjust hoga */
+                btn.style.padding = "10px 15px"; /* Side padding taaki text chipke na */
+            }
+        });
+    </script>
+</body>
+
+</html>
